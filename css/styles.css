@@ -77,7 +77,7 @@ img {
 
 /* Логотип в Хедері */
 
-.logo-header {
+.header-logo {
   display: flex;
   margin-right: 93px;
   padding-top: 24px;
@@ -96,31 +96,31 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.logo-dark {
+.header-logo--dark {
   color: var(--logo-dak-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.logo-header:hover .logo-dark {
+.header-logo:hover .header-logo--dark {
   color: var(--accent-color);
 }
-.logo-header:focus .logo-dark {
+.header-logo:focus .header-logo--dark {
   color: var(--accent-color);
 }
 /* Навігація в Хедері */
 
-.container-header-nav {
+.container--flex {
   display: flex;
   align-items: center;
 }
 
-.flex-nav {
+.header__nav {
   display: flex;
   align-items: center;
 
   background-color: var(--primary-background-color);
 }
 
-.nav-link {
+.header__nav-link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -137,25 +137,25 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link:hover {
+.header__nav-link:hover {
   color: var(--accent-color);
 }
 
-.nav-link:focus {
+.header__nav-link:focus {
   color: var(--accent-color);
 }
 
-.nav-link.current {
+.header__nav-link.current {
   color: var(--accent-color);
   position: relative;
 }
 
 /* Нижнє підкреслення у Хедер під посиланням Студія */
-.current {
+.header__nav-link--current {
   position: relative;
 }
 
-.current::after {
+.header__nav-link--current::after {
   display: block;
   content: '';
   width: 100%;
@@ -172,21 +172,25 @@ img {
 
 /* Список в Хедері */
 
-.list-header {
+.header__list {
   display: flex;
   flex-shrink: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
 }
 
-.list-header li:not(:last-child) {
+.header__list .header__item:not(:last-child) {
   margin-right: 50px;
 }
 
 /* Email в header */
-
-.list-header-marginauto {
+/* 
+.header__list--marginauto {
   margin-left: auto;
-}
-.mail-link {
+} */
+.header__link {
   display: flex;
   align-items: center;
   padding-bottom: 32px;
@@ -204,16 +208,20 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mail-link:hover {
+.header__link:hover {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
-.mail-link:focus {
+.header__link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
-.flex-mail {
+.header__link--margin {
+  margin-right: 30px;
+}
+
+.header__flex-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -221,13 +229,13 @@ img {
 
 /* Іконки в Хедері */
 
-.icon-logo-header {
+.header__logo-icon {
   margin-right: 10px;
 }
 
 /* Телефон в header */
 
-.header-phone {
+.header__phone {
   display: flex;
   text-align: center;
   padding-top: 32px;
@@ -246,19 +254,19 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-phone:hover {
+.header__phone:hover {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
-.header-phone:focus {
+.header__phone:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
 /* Cекція hero */
 
-.hero-section {
+.section-hero {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -267,7 +275,7 @@ img {
 }
 
 /* Overlay */
-.overlay {
+.section-hero--overlay {
   height: 600px;
   max-width: 1600px;
   margin-left: auto;
@@ -280,7 +288,7 @@ img {
   background-size: cover;
 }
 
-.hero-title {
+.section-hero__title {
   margin: 0 auto 30px;
   max-width: 696px;
 
