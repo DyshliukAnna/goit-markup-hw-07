@@ -318,9 +318,6 @@ img {
 /* Кнопка на головній сторінці */
 
 .main-button {
-  max-width: 280px;
-  margin: 0 auto;
-  padding: 10px 32px;
   border: 0;
   border-radius: 4px;
 
@@ -338,6 +335,11 @@ img {
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.main-button--big {
+  max-width: 218px;
+  margin: 0 auto;
+  padding: 10px 32px;
 }
 
 .main-button:hover {
@@ -552,11 +554,11 @@ img {
 */
 
 /* Кнопки */
-.hero-portfolio-title {
+.main-portfolio__title {
   font-size: 16px;
 }
 
-.main-section-portfolio {
+.main-portfolio {
   background-color: var(--primary-background-color);
 
   text-decoration: none;
@@ -574,7 +576,7 @@ img {
   justify-content: center;
 }
 
-.item-secondary-button:not(:last-child) {
+.secondary-button__item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -616,7 +618,7 @@ img {
 
 /*  Флекси для оформлення карток на сторінці Портфоліо */
 
-.list-prtfolio-flex {
+.list-portfolio {
   display: flex;
   flex-wrap: wrap;
 
@@ -624,13 +626,13 @@ img {
   margin-left: calc(-1 * var(--card-portfolio-gap));
 }
 
-.item-prtfolio-flex {
+.list-prtfolio__item {
   margin-top: var(--card-portfolio-gap);
   margin-left: var(--card-portfolio-gap);
   flex-basis: calc(100% / 3 - var(--card-portfolio-gap));
 }
 
-.title-item-card {
+.thumb-card__title {
   margin-bottom: 4px;
 
   color: var(--primary-color);
@@ -642,14 +644,14 @@ img {
   text-decoration: none;
 }
 
-.item-prtfolio-flexpart {
+.thumb-card__part {
   padding: 20px 24px;
   border-right: 1px solid var(--border-color-portfolio);
   border-bottom: 1px solid var(--border-color-portfolio);
   border-left: 1px solid var(--border-color-portfolio);
 }
 
-.project-description {
+.thumb-card__description {
   color: var(--secondary-color);
 
   font-size: 16px;
@@ -657,7 +659,7 @@ img {
   text-decoration: none;
 }
 
-.link-decoration-portfolio {
+.list-portfolio__link {
   position: relative;
   display: block;
   width: 370px;
@@ -665,14 +667,14 @@ img {
   margin-bottom: 0;
 }
 
-.link-decoration-portfolio:hover,
-.link-decoration-portfolio:focus {
+.list-portfolio__link:hover,
+.list-portfolio__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.link-decoration-portfolio:hover .overlay-text-decoration,
-.link-decoration-portfolio:focus .overlay-text-decoration {
+.list-portfolio__link:hover .thumb-card__overlay,
+.list-portfolio__link:focus .thumb-card__overlay {
   transform: translateY(0%);
 }
 
@@ -682,7 +684,7 @@ img {
   position: relative;
   overflow: hidden;
 }
-.overlay-text-decoration {
+.thumb-card__overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -921,7 +923,7 @@ img {
   transform: scale(0.9) translate(-50%, -50%);
 }
 
-.modal {
+.backdrop__modal {
   display: block;
   position: absolute;
   top: 50%;
@@ -966,7 +968,7 @@ img {
 
 /*Оформлення модального вікна. Заповнення інпутами */
 
-.modal-title {
+.contact-form__description {
   font-weight: 700;
   font-size: 20px;
   line-height: calc(23 / 20);
@@ -978,10 +980,10 @@ img {
   width: 100%;
 }
 
-.form-control {
+.contact-form__control {
   position: relative;
 }
-.form-input {
+.contact-form__input {
   display: block;
   height: 40px;
   width: 100%;
@@ -990,14 +992,14 @@ img {
   border-radius: 4px;
   outline: none;
 }
-.form-input:focus {
+.contact-form__input:focus {
   border-color: var(--accent-color);
 }
-.form-input:focus + .form-icon {
+.contact-form__input:focus + .contact-form__icon {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
-.form-icon {
+.contact-form__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -1006,7 +1008,7 @@ img {
   pointer-events: none;
   /* Щоб іконка змінювала колір при наведенні саме на неї, щоб можна було натиснути на неї і змінився колір, а не тільки при наведенні на весь інпут */
 }
-.form-label {
+.contact-form__label {
   display: block;
   margin-bottom: 4px;
   text-align: start;
@@ -1020,14 +1022,14 @@ img {
   margin-bottom: 4px;
 }
 
-.form-field {
+.contact-form__field {
   margin-bottom: 10px;
 }
-.form-field-textarea {
+.contact-form__textarea-field {
   margin-bottom: 20px;
 }
 
-.form-textarea {
+.contact-form__textarea {
   display: block;
   width: 100%;
   padding: 12px 16px;
@@ -1037,7 +1039,7 @@ img {
   height: 120px;
   resize: none;
 }
-.form-textarea::placeholder {
+.contact-form__textarea::placeholder {
   position: relative;
   display: block;
   color: rgba(117, 117, 117, 0.5);
@@ -1052,18 +1054,18 @@ img {
 }
 
 /* Checkbox */
-.form-field-checkbox {
+.contact-form__checkbox {
   margin-bottom: 30px;
   position: relative;
 }
 
-.checkbox-input {
+.contact-form__checkbox-input {
   display: block;
   appearance: none;
   text-align: center;
 }
 
-.checkbox-label {
+.contact-form__label-checkbox {
   position: relative;
   display: block;
   text-align: left;
@@ -1075,11 +1077,11 @@ img {
   letter-spacing: 0.03em;
   /* margin-bottom: 30px; */
 }
-.checkbox-link {
+.contact-form__checkbox-link {
   color: var(--accent-color);
 }
 
-.checkbox-label::before {
+.contact-form__label-checkbox::before {
   display: flex;
   content: '';
   position: absolute;
@@ -1096,7 +1098,7 @@ img {
   background-origin: border-box;
 }
 
-.form-icon-checkbox {
+.contact-form__icon-checkbox {
   display: inline-flex;
   position: absolute;
   top: 4px;
@@ -1114,7 +1116,7 @@ img {
   opacity: 0;
 }
 
-.checkbox-input:checked + .form-icon-checkbox {
+.contact-form__checkbox-input:checked + .contact-form__icon-checkbox {
   border: 2px;
   border-color: var(--accent-color);
   background-origin: border-box;
@@ -1123,7 +1125,7 @@ img {
   opacity: 1;
 }
 
-.checkbox-input:checked ~ .checkbox-label::before {
+.contact-form__checkbox-input:checked ~ .contact-form__label-checkbox::before {
   opacity: 0;
 }
 
@@ -1208,10 +1210,6 @@ label {
   color: var(--input-placeholder-footer);
 }
 .button-footer {
-  position: absolute;
-  left: 100%;
-  top: 0;
-  transform: translatex(12px);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -1233,10 +1231,17 @@ label {
 
   cursor: pointer;
 }
+
 .button-footer:hover,
 .button-footer:focus {
   color: var(--hero-color);
   background-color: var(--accent-background-color);
+}
+.form-footer__button-footer {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  transform: translatex(12px);
 }
 
 .button-footer-icon {
