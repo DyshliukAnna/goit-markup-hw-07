@@ -1164,7 +1164,7 @@ img {
   align-items: baseline;
 }
 
-.field-form-footer {
+.form-footer__field {
   position: relative;
 }
 
@@ -1175,7 +1175,7 @@ label {
   padding: 0;
 }
 
-.text-form-footer {
+.form-footer__text {
   width: 100%;
   color: var(--hero-color);
 
@@ -1187,11 +1187,11 @@ label {
   margin-bottom: 20px;
 }
 
-.label-form-footer {
+.form-footer__label {
   display: block;
 }
 
-.form-follow-footer {
+.form-footer__follow {
   position: relative;
   display: block;
   min-width: 358px;
@@ -1204,7 +1204,7 @@ label {
   border-radius: 4px;
   background-color: inherit;
 }
-.form-follow-footer::placeholder {
+.form-footer__follow::placeholder {
   color: var(--input-placeholder-footer);
 }
 .button-footer {
