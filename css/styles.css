@@ -702,7 +702,7 @@ img {
 
 /* Секція Постійні клієнти */
 
-.text-clients {
+.clients__text {
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
@@ -710,7 +710,7 @@ img {
   margin-bottom: 50px;
 }
 
-.link-logo-clients {
+.clients-list__link {
   display: block;
   fill: #afb1b8;
   height: 92px;
@@ -724,8 +724,8 @@ img {
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-logo-clients:hover,
-.link-logo-clients:focus {
+.clients-list__link:hover,
+.clients-list__link:focus {
   fill: var(--icons-hover-color);
   border-color: var(--accent-color);
 }
@@ -832,7 +832,7 @@ img {
   justify-content: space-between;
   text-transform: uppercase;
 }
-.clients-flex {
+.clients-list {
   display: flex;
   justify-content: space-between;
 }
@@ -899,7 +899,7 @@ img {
   color: var(--hero-color);
 }
 
-.main-flex-footer {
+.footer__container {
   display: flex;
   align-items: baseline;
 }
