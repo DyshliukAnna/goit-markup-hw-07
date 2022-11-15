@@ -97,9 +97,7 @@ img {
   color: var(--logo-dak-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.logo:hover .logo--dark {
-  color: var(--accent-color);
-}
+.logo:hover .logo--dark,
 .logo:focus .logo--dark {
   color: var(--accent-color);
 }
@@ -144,21 +142,15 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header__link:hover {
-  color: var(--accent-color);
-}
-
+.header__link:hover,
 .header__link:focus {
   color: var(--accent-color);
 }
 
+/* Нижнє підкреслення у Хедер під посиланням Студія */
+
 .header__link--current {
   color: var(--accent-color);
-  position: relative;
-}
-
-/* Нижнє підкреслення у Хедер під посиланням Студія */
-.header__link--current {
   position: relative;
 }
 
@@ -192,11 +184,6 @@ img {
   margin-right: 50px;
 }
 
-/* Email в header */
-/* 
-.header__list--marginauto {
-  margin-left: auto;
-} */
 .contacts__mail {
   display: flex;
   align-items: center;
@@ -217,10 +204,7 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts__mail:hover {
-  color: var(--accent-color);
-  fill: var(--accent-color);
-}
+.contacts__mail:hover,
 .contacts__mail:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
@@ -268,11 +252,7 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts__phone:hover {
-  color: var(--accent-color);
-  fill: var(--accent-color);
-}
-
+.contacts__phone:hover,
 .contacts__phone:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
