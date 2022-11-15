@@ -350,10 +350,7 @@ img {
   padding: 10px 32px;
 }
 
-.main-button:hover {
-  color: var(--hero-color);
-  background-color: var(--accent-background-color);
-}
+.main-button:hover,
 .main-button:focus {
   color: var(--hero-color);
   background-color: var(--accent-background-color);
@@ -613,12 +610,6 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.secondary-button:focus {
-  color: var(--hero-color);
-  background-color: var(--accent-color);
-
-  outline: none;
-}
 
 /* Картки */
 
@@ -711,9 +702,6 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* .thumb-card:hover .overlay-text-decoration {
-  transform: translateY(0%);
-} */
 
 /* Секція Постійні клієнти */
 
@@ -803,10 +791,6 @@ img {
   margin-bottom: 9px;
 }
 
-/* .adress__phone {
-  margin-bottom: 0px;
-} */
-
 .adress__contacts-link {
   display: block;
 
@@ -819,10 +803,7 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.adress__contacts-link:hover {
-  color: var(--accent-color);
-}
-
+.adress__contacts-link:hover,
 .adress__contacts-link:focus {
   color: var(--accent-color);
 }
@@ -957,7 +938,7 @@ img {
   width: 30px;
   height: 30px;
 
-  fill: #000000;
+  fill: var(--logo-dak-color);
   background-color: var(--primary-background-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -965,13 +946,10 @@ img {
   cursor: pointer;
   outline: none;
 }
-.button-close-modal:hover {
+.button-close-modal:hover,
+.button-close-modal:focus {
   fill: var(--icons-hover-color);
 }
-.button-close-modal:focus {
-  fill: var(--accent-color);
-}
-
 /*Оформлення модального вікна. Заповнення інпутами */
 
 .form__description {
