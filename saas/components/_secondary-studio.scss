@@ -1,4 +1,7 @@
-/* Секція з фотографіями нашої команди */
+//  Секція з фотографіями нашої команди 
+.secondary {
+  background-color: $secondary-background-color;
+}
 
 .secondary__title {
   margin: 0 auto 50px;
@@ -8,19 +11,15 @@
   line-height: calc(42 / 36);
 }
 
-.secondary {
-  background-color: var(--secondary-background-color);
-}
-
-/* Флекси для секції з фотографіями команди */
+// Флекси для секції з фотографіями команди 
 
 .secondary-cardset {
   display: flex;
 
   flex-wrap: wrap;
 
-  margin-top: calc(-1 * var(--card-portfolio-gap));
-  margin-left: calc(-1 * var(--card-portfolio-gap));
+  margin-top: calc(-1 * $card-portfolio-gap);
+  margin-left: calc(-1 * $card-portfolio-gap);
 }
 
 .secondary-item {
@@ -29,9 +28,10 @@
 
   max-width: 270px;
 
-  margin-top: var(--card-portfolio-gap);
-  margin-left: var(--card-portfolio-gap);
-  flex-basis: calc(100% / 4 - var(--card-portfolio-gap));
+  margin-top: $card-portfolio-gap;
+  margin-left: $card-portfolio-gap;
+  flex-basis: calc(100% / 4 - $card-portfolio-gap);
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -42,10 +42,11 @@
   flex-direction: column;
   align-items: center;
   padding: 30px;
-  background-color: var(--primary-background-color);
+  background-color: $primary-background-color;
 }
 
-/* Основне оформлення секції з фотографіями команди secondary section*/
+// Основне оформлення секції з фотографіями команди secondary section
+
 .secondary-item__title {
   margin-bottom: 10px;
 
@@ -55,7 +56,7 @@
 }
 
 .secondary-item__description {
-  color: var(--secondary-color);
+  color: $secondary-color;
 
   font-size: 16px;
   line-height: calc(19 / 16);
