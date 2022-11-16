@@ -14,7 +14,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--svg-net-color);
+  color: $svg-net-color;
   align-items: center;
 
   justify-content: center;
@@ -22,20 +22,21 @@
   fill: currentColor;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+        color: $hero-color;
+        fill: currentColor;
+      }
+    &--painted {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
 }
 
-.network__link:hover,
-.network__link:focus {
-  background-color: var(--accent-color);
-  color: var(--hero-color);
-  fill: currentColor;
-}
 // Намальований бекграунд для іконок в футері
 
-.network__link--painted {
-  background-color: rgba(255, 255, 255, 0.1);
-}
 
 // Оформлення іконок в футері в білий колір
 .icon--white {
