@@ -727,6 +727,12 @@ img {
   padding-bottom: 60px;
 }
 
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+
 .footer-nav {
   display: flex;
   flex-direction: column;
@@ -855,11 +861,6 @@ img {
   text-transform: uppercase;
 
   color: var(--hero-color);
-}
-
-.footer__container {
-  display: flex;
-  align-items: baseline;
 }
 
 /* Модальне вікно на головній сторінці. Кнопка :"Засмовити послугу" */
@@ -1163,7 +1164,7 @@ label {
   width: 24px;
   height: 24px;
 }
-
+/* Налаштування settings.json для папки вс код, для компілятора.*/
 {
   "liveSassCompile.settings.formats": [
     {
