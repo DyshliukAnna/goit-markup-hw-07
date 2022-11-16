@@ -1,7 +1,7 @@
-/* Флекси + серія фотографій з секції: "Чим ми займаємось" на головній сторінці*/
+//  Флекси + серія фотографій з секції: "Чим ми займаємось" на головній сторінці
 
 .main {
-    background-color: var(--hero-color);
+    background-color: $hero-color;
     padding-top: 0;
 }
 
@@ -23,27 +23,29 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    /* gap: 30px;
-    flex-basis: calc((100%-60px) / 3); */
 
-    margin-top: calc(-1 * var(--card-portfolio-gap));
-    margin-left: calc(-1 * var(--card-portfolio-gap));
+    //  gap: 30px;
+    // flex-basis: calc((100%-60px) / 3); 
+
+    margin-top: calc(-1 * $card-portfolio-gap);
+    margin-left: calc(-1 * $card-portfolio-gap);
 }
 
 .main-card {
     display: flex;
 
-    /* gap: 30px;
-    flex-basis: calc((100%-60px) / 3); */
-    margin-top: var(--card-portfolio-gap);
-    margin-left: var(--card-portfolio-gap);
-    flex-basis: calc(100% / 3 - var(--card-portfolio-gap));
+    //  gap: 30px;
+    // flex-basis: calc((100%-60px) / 3); 
+
+    margin-top: $card-portfolio-gap;
+    margin-left: $card-portfolio-gap;
+    flex-basis: calc(100% / 3 - $card-portfolio-gap);
 
     position: relative;
 }
 
-/* Позиціонування тексту відносно зображення в секції Чим ми займаємось
- */
+// Позиціонування тексту відносно зображення в секції Чим ми займаємось
+ 
 
 .main-card__text {
     display: flex;
@@ -54,10 +56,9 @@
     left: 0px;
     width: 100%;
     height: 70px;
-    /* z-index: 1; */
 
-    color: var(--hero-color);
-    background-color: var(--image-background-color);
+    color: $hero-color;
+    background-color: $image-background-color;
 
     font-weight: 700;
     line-height: calc(16 / 14);
