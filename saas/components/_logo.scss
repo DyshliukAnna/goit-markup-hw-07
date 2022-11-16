@@ -3,7 +3,7 @@
 
     width: 145px;
 
-    color: var(--accent-color);
+    color: $accent-color;
 
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -14,7 +14,6 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
-
         .logo--dark {
             color: $accent-color;
         }
@@ -23,13 +22,13 @@
 }
 
 .logo--dark {
-    color: var(--logo-dak-color);
+    color: $logo-dak-color;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo:hover .logo--dark,
 .logo:focus .logo--dark {
-    color: var(--accent-color);
+    color: $accent-color;
 }
 
 /* Мікс для відступів по БЕМ в Хедері */
