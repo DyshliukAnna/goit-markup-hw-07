@@ -153,7 +153,6 @@ img {
   color: var(--accent-color);
   position: relative;
 }
-
 .header__link--current::after {
   display: block;
   content: '';
@@ -531,6 +530,41 @@ img {
   margin-bottom: 16px;
 }
 
+/* Секція Постійні клієнти */
+
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients__text {
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+}
+
+.clients-list__link {
+  display: block;
+  fill: #afb1b8;
+  height: 92px;
+  width: 170px;
+  padding: 16px 32px;
+
+  border: 1px solid rgba(175, 177, 184, 1);
+  border-radius: 4px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients-list__link:hover,
+.clients-list__link:focus {
+  fill: var(--icons-hover-color);
+  border-color: var(--accent-color);
+}
+
 /* /* Сторінка Портфоліо */
 
 /* Стилізація кнопок і карток*/
@@ -547,20 +581,11 @@ img {
   text-decoration: none;
 }
 
-/* Відступи від кнопок до карток */
-
-.secondary-buttons {
-  margin-bottom: 50px;
-}
 /* Основне оформлення кнопок  на сторінці Портфоліо*/
 
 .secondary-buttons {
   display: flex;
   justify-content: center;
-}
-
-.secondary-button__item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .secondary-button {
@@ -591,7 +616,17 @@ img {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* Картки */
+.secondary-button__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Відступи від кнопок до карток */
+
+.secondary-buttons {
+  margin-bottom: 50px;
+}
+
+/* Картки на сторінці Портфоліо */
 
 /*  Флекси для оформлення карток на сторінці Портфоліо */
 
@@ -683,35 +718,6 @@ img {
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Секція Постійні клієнти */
-
-.clients__text {
-  font-size: 36px;
-  line-height: calc(42 / 36);
-  text-align: center;
-  color: var(--primary-color);
-  margin-bottom: 50px;
-}
-
-.clients-list__link {
-  display: block;
-  fill: #afb1b8;
-  height: 92px;
-  width: 170px;
-  padding: 16px 32px;
-
-  border: 1px solid rgba(175, 177, 184, 1);
-  border-radius: 4px;
-
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients-list__link:hover,
-.clients-list__link:focus {
-  fill: var(--icons-hover-color);
-  border-color: var(--accent-color);
-}
 
 /* Footer */
 
@@ -797,10 +803,7 @@ img {
   justify-content: space-between;
   text-transform: uppercase;
 }
-.clients-list {
-  display: flex;
-  justify-content: space-between;
-}
+
 .network__link {
   display: flex;
   width: 44px;
@@ -839,10 +842,6 @@ img {
   height: 80px;
   align-items: flex-start;
   margin-right: 93px;
-}
-
-.footer-nav {
-  display: flex;
 }
 
 .join__text {
@@ -1163,4 +1162,22 @@ label {
   fill: var(--hero-color);
   width: 24px;
   height: 24px;
+}
+
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css"
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/css"
+    }
+  ],
+  "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
+  "liveSassCompile.settings.generateMap": true,
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"]
 }
