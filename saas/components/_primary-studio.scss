@@ -12,8 +12,8 @@
     display: flex;
     flex-wrap: wrap;
 
-    margin-top: calc(-1 * var(--card-portfolio-gap));
-    margin-left: calc(-1 * var(--card-portfolio-gap));
+    margin-top: calc(-1 * $card-portfolio-gap);
+    margin-left: calc(-1 * $card-portfolio-gap);
 
     list-style: none;
 }
@@ -23,9 +23,9 @@
     flex-direction: column;
     width: 270px;
 
-    margin-top: var(--card-portfolio-gap);
-    margin-left: var(--card-portfolio-gap);
-    flex-basis: calc(100% / 4 - var(--card-portfolio-gap));
+    margin-top: $card-portfolio-gap;
+    margin-left: $card-portfolio-gap;
+    flex-basis: calc(100% / 4 - ($card-portfolio-gap));
 }
 
 .primary-list__icon-background {
@@ -33,7 +33,7 @@
     max-width: 100%;
     padding: 25px 100px;
     margin-bottom: 30px;
-    background-color: var(--svg-background-color);
+    background-color: $svg-background-color;
     border-radius: 4px;
 }
 
