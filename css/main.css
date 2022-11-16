@@ -948,11 +948,6 @@ label {
   /* На елемент більше не діють ніякі події, що дозволяє при hidden клацати по кнопках і бекдроп з модалкою не заважають, більше не перекривають можливість працювати із сторінкою, хоча і візуально не видно було щоб заважало, але кнопки не натискались. */
 }
 
-.backdrop.is-hidden .backdrop__modal {
-  -webkit-transform: scale(0.9) translate(-50%, -50%);
-          transform: scale(0.9) translate(-50%, -50%);
-}
-
 .backdrop__modal {
   display: block;
   position: absolute;
@@ -967,7 +962,11 @@ label {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform cubic-bezier(0.4, 0, 0.2, 1);
   width: 528px;
   height: 581px;
-  background-color: var(--primary-background-color);
+  background-color: #ffffff;
+}
+.backdrop.is-hidden .backdrop__modal {
+  -webkit-transform: scale(0.9) translate(-50%, -50%);
+          transform: scale(0.9) translate(-50%, -50%);
 }
 
 /* Кнопка закриття модального вікна */
@@ -994,13 +993,15 @@ label {
   cursor: pointer;
   outline: none;
 }
-
-.button-close-modal:hover,
-.button-close-modal:focus {
+.button-close-modal:hover, .button-close-modal:focus {
   fill: #2196f3;
 }
 
 /*Оформлення модального вікна. Заповнення інпутами */
+.form {
+  width: 100%;
+}
+
 .form__description {
   font-weight: 700;
   font-size: 20px;
@@ -1010,8 +1011,8 @@ label {
   margin-bottom: 12px;
 }
 
-.form {
-  width: 100%;
+.form__field {
+  margin-bottom: 10px;
 }
 
 .form__control {
@@ -1027,14 +1028,8 @@ label {
   border-radius: 4px;
   outline: none;
 }
-
 .form__input:focus {
   border-color: #2196f3;
-}
-
-.form__input:focus + .form__icon {
-  color: #2196f3;
-  fill: #2196f3;
 }
 
 .form__icon {
@@ -1047,6 +1042,10 @@ label {
   pointer-events: none;
   /* Щоб іконка змінювала колір при наведенні саме на неї, щоб можна було натиснути на неї і змінився колір, а не тільки при наведенні на весь інпут */
 }
+.form__input:focus + .form__icon {
+  color: #2196f3;
+  fill: #2196f3;
+}
 
 .form__label {
   display: block;
@@ -1057,10 +1056,6 @@ label {
   line-height: 1.1666666667;
   letter-spacing: 0.01em;
   margin-bottom: 4px;
-}
-
-.form__field {
-  margin-bottom: 10px;
 }
 
 .form__textarea-field {
@@ -1077,7 +1072,6 @@ label {
   height: 120px;
   resize: none;
 }
-
 .form__textarea::-webkit-input-placeholder {
   position: relative;
   display: block;
@@ -1087,7 +1081,6 @@ label {
   letter-spacing: 0.01em;
   z-index: 3;
 }
-
 .form__textarea::-moz-placeholder {
   position: relative;
   display: block;
@@ -1097,7 +1090,6 @@ label {
   letter-spacing: 0.01em;
   z-index: 3;
 }
-
 .form__textarea:-ms-input-placeholder {
   position: relative;
   display: block;
@@ -1107,7 +1099,6 @@ label {
   letter-spacing: 0.01em;
   z-index: 3;
 }
-
 .form__textarea::-ms-input-placeholder {
   position: relative;
   display: block;
@@ -1117,7 +1108,6 @@ label {
   letter-spacing: 0.01em;
   z-index: 3;
 }
-
 .form__textarea::placeholder {
   position: relative;
   display: block;
@@ -1127,7 +1117,6 @@ label {
   letter-spacing: 0.01em;
   z-index: 3;
 }
-
 .form__textarea:focus {
   border-color: #2196f3;
 }
@@ -1157,10 +1146,6 @@ label {
   /* margin-bottom: 30px; */
 }
 
-.form__checkbox-link {
-  color: #2196f3;
-}
-
 .form__label-checkbox::before {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1179,6 +1164,13 @@ label {
   opacity: 1;
   background-origin: border-box;
 }
+.form__checkbox-input:checked ~ .form__label-checkbox::before {
+  opacity: 0;
+}
+
+.form__checkbox-link {
+  color: #2196f3;
+}
 
 .form__icon-checkbox {
   display: -webkit-inline-box;
@@ -1196,7 +1188,6 @@ label {
   background-origin: border-box;
   opacity: 0;
 }
-
 .form__checkbox-input:checked + .form__icon-checkbox {
   border: 2px;
   border-color: #2196f3;
@@ -1204,10 +1195,6 @@ label {
   background-color: #2196f3;
   fill: #188ce8;
   opacity: 1;
-}
-
-.form__checkbox-input:checked ~ .form__label-checkbox::before {
-  opacity: 0;
 }
 
 .form__main-button {
