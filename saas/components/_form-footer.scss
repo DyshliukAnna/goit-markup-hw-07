@@ -1,5 +1,6 @@
 
-/* Форма в Футері */
+// Форма в Футері 
+
 .form-footer {
     position: relative;
     display: flex;
@@ -11,16 +12,9 @@
     position: relative;
 }
 
-label {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
 .form-footer__text {
     width: 100%;
-    color: var(--hero-color);
+    color: $hero-color;
 
     font-size: 14px;
     font-weight: 700;
@@ -41,16 +35,18 @@ label {
     min-height: 50px;
 
     padding-left: 16px;
-    color: var(--hero-color);
+    color: $hero-color;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     background-color: inherit;
+
+    &::placeholder {
+            color: $input-placeholder-footer;
+        }
 }
 
-.form-footer__follow::placeholder {
-    color: var(--input-placeholder-footer);
-}
+
 
 .form-footer__main-button {
     position: absolute;
@@ -63,7 +59,7 @@ label {
 .button-form__icon {
     display: block;
     margin-left: 10px;
-    fill: var(--hero-color);
+    fill: $hero-color;
     width: 24px;
     height: 24px;
 }
