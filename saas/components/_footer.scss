@@ -6,6 +6,11 @@
     padding-bottom: 60px;
 }
 
+.footer__container {
+    display: flex;
+    align-items: baseline;
+}
+
 .footer-nav {
     display: flex;
     flex-direction: column;
@@ -72,4 +77,25 @@
 .adress__contacts-link:hover,
 .adress__contacts-link:focus {
     color: var(--accent-color);
+}
+.join {
+    display: flex;
+    flex-direction: column;
+    width: 206px;
+    height: 80px;
+    align-items: flex-start;
+    margin-right: 93px;
+}
+
+.join__text {
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 14px;
+
+    font-weight: 700;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--hero-color);
 }
