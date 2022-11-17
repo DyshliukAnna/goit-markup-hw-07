@@ -93,12 +93,12 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.logo--dark {
+.logo__dark {
   color: var(--logo-dak-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.logo:hover .logo--dark,
-.logo:focus .logo--dark {
+.logo:hover .logo__dark,
+.logo:focus .logo-__dark {
   color: var(--accent-color);
 }
 
